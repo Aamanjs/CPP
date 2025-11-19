@@ -350,6 +350,7 @@ Output: 6
 #include <iostream>
 using namespace std;
 
+// euclidean theorem
 int gcd(int a, int b){
     while (b!=0){
         int temp = b;
