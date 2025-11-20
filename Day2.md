@@ -158,6 +158,8 @@ Q4. Write a function to calculate factorial of a number.
 using namespace std;
 
 int factorial(int num){
+
+    //using for loop
     // int fact = 1;
 
     // for(int i=num ; i>0 ; i--){
@@ -165,6 +167,7 @@ int factorial(int num){
     // }
     // return fact;
 
+    //using recursion
     if(num == 0 || num == 1){
         return 1;
     }
@@ -180,4 +183,37 @@ int main(){
     cout << "Factorial of " << n << " is " << factorial(n);
 }
 ```
+Q5. Write a function to compute simple interest.
+```cpp
+#include <iostream>
+using namespace std;
+
+int SI(int p, int r, int t){
+
+    int si = (p*r*t)/100;
+
+    return si;
+
+}
+
+int main(){
+
+    int p;
+    int r;
+    int t;
+
+    cout << "Enter Principal Amount: ";
+    cin >> p;
+
+    cout << "Enter Interest Rate: ";
+    cin >> r;
+
+    cout << "Enter Time: ";
+    cin >> t;
+
+    cout << "Simple Interest is " << SI(p,r,t) << " rupees.";
+
+}
+```
+
 
