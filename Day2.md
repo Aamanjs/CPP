@@ -256,3 +256,83 @@ string calcGrade(int marks){
 }
 ```
 
+Q7. Write a function to print all numbers between two inputs.
+```cpp
+#include <iostream>
+using namespace std;
+
+void numbers(int n1, int n2);
+
+int main(){
+
+    int num1, num2;
+    cout << "Enter number 1: " << endl;
+    cin >> num1;
+    cout << "Enter number 2: " << endl;
+    cin >> num2;
+
+    numbers(num1, num2);
+
+    return 0;
+}
+
+void numbers(int n1, int n2){
+
+    if(n1 < n2){
+        
+        cout << "Numbers between " << n1 << " and " << n2 << " are : ";
+        for(int i=n1+1; i<n2; i++){
+            cout << i << " ";
+        }
+
+    } else {
+        cout << "Invalid input, Number 1 should be less than number 2!!!";
+    }
+
+}
+```
+
+Q8. Write a function to find the largest digit of a number.
+```cpp
+#include <iostream>
+using namespace std;
+
+int largestDigit(int num);
+
+int main(){
+
+    int num;
+    cout << "Enter number: ";
+    cin >> num;
+
+    cout << "Largest digit in " << num << " is: " << largestDigit(num);
+
+}
+
+int largestDigit(int num){
+    int maxDigit = 0;
+    int remainder;
+
+    while(num != 0){
+        remainder = num % 10;
+        if(remainder > maxDigit){
+            maxDigit = remainder;
+        }
+        num /= 10;
+    }
+
+    return maxDigit;
+}
+```
+
+Q9. Write functions for:
+Reading units
+Calculating bill based on slabs:
+   0–100 → ₹3/unit
+   101–200 → ₹4.5/unit
+   200 → ₹6/unit
+Adding fixed charges
+Printing bill.
+```cpp
+
+```
