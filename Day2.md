@@ -334,5 +334,53 @@ Calculating bill based on slabs:
 Adding fixed charges
 Printing bill.
 ```cpp
+#include <iostream>
+using namespace std; 
 
+int readUnits();
+double calcBill(int u);
+double addFixedCharges(double bill);
+void printBill(int units, double total);
+
+int main(){
+
+    int units = readUnits();
+    double bill = calcBill(units);
+    double finalAmont = addFixedCharges(bill);
+
+    printBill(units, bill);
+
+    return 0;
+
+}
+
+int readUnits(){
+    int u;
+    cout << "Enter units consumed: ";
+    cin >> u;
+    return u;
+}
+
+double calcBill(int u){
+
+    if(u>=0 && u<=100){
+        return u*3;
+    } else if (u>100 && u<=200){
+        return (100*3)+(u-100)*4.5;
+    } else {
+        return (100*3) + (100*4.5) + (u-200)*6;
+    }
+
+}
+
+double addFixedCharges(double bill){
+    int charges = 50;
+    return bill + charges;
+}
+
+void printBill(int units, double total){
+    cout << "\n------ Electricity Bill ------" << endl;
+    cout << "Units Consumed : " << units << endl;
+    cout << "Total Bill     : " << total << " rupees " << endl; 
+}
 ```
