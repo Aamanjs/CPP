@@ -1,6 +1,7 @@
 ## Practice Questions
 
 Q1. Write a C++ program to demonstrate the operations on pointers.
+
 ```cpp
 #include <iostream>
 using namespace std;
@@ -49,6 +50,7 @@ ipt + 1 = 0x61ff08
 ```
 
 Q2. Write a C++ program to swap two numbers using functions.
+
 ```cpp
 #include <iostream>
 using namespace std;
@@ -77,6 +79,7 @@ int main(){
 
 
 ```
+
 Q3.  Write a C++ program to create a menu driven calculator with the concept of switch case for menu and functions for operations.r
 ```cpp
 #include <iostream>
@@ -152,6 +155,7 @@ int divide(int num1, int num2){
 }
 
 ```
+
 Q4. Write a function to calculate factorial of a number.
 ```cpp
 #include <iostream>
@@ -183,6 +187,7 @@ int main(){
     cout << "Factorial of " << n << " is " << factorial(n);
 }
 ```
+
 Q5. Write a function to compute simple interest.
 ```cpp
 #include <iostream>
@@ -216,4 +221,38 @@ int main(){
 }
 ```
 
+Q6.  Write a function to determine the grade of a student based on marks and utilize it to calculate grade of one students.
+```cpp
+#include <iostream>
+using namespace std;
+
+string calcGrade(int marks);
+
+int main(){
+
+    int marks;
+    cout << "Enter the marks: " ;
+    cin >> marks;
+
+    cout << "Student scored grade " << calcGrade(marks);
+
+}
+
+string calcGrade(int marks){
+
+    if(marks >= 90){
+        return "A";
+    } else if(marks >= 80 && marks < 90) {
+        return "B";
+    } else if(marks >= 70 && marks < 80){
+        return "C";
+    } else if(marks >= 60 && marks < 70){
+        return "D";
+    } else if(marks >= 50 && marks < 60){
+        return "E";
+    } else {
+        return "F";
+    }
+}
+```
 
