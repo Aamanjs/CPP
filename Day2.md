@@ -152,8 +152,32 @@ int divide(int num1, int num2){
 }
 
 ```
-Q4. Increment i directly (i++) and indirectly ((*iptr)++). Compare results.
+Q4. Write a function to calculate factorial of a number.
 ```cpp
+#include <iostream>
+using namespace std;
 
+int factorial(int num){
+    // int fact = 1;
+
+    // for(int i=num ; i>0 ; i--){
+    //     fact *= i;
+    // }
+    // return fact;
+
+    if(num == 0 || num == 1){
+        return 1;
+    }
+    return num*factorial(num-1);
+}
+
+int main(){
+    
+    int n;
+    cout << "Enter the number" << endl;
+    cin >> n;
+
+    cout << "Factorial of " << n << " is " << factorial(n);
+}
 ```
 
