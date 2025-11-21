@@ -491,3 +491,64 @@ void miniStatement() {
     cout << "Current Balance: ₹" << balance << endl;
 }
 ```
+Q11. 11.Voting Eligibility Validation System
+Functions:
+inputDOB()
+calculateAge()
+checkEligibility()
+printResult()
+```cpp
+#include <iostream>
+using namespace std;
+
+int inputDOB();
+int calculateAge(int birthYear);
+bool checkEligibility(int age);
+void printResult(bool eligible, int age);
+
+int main(){
+    
+    int birthYear = inputDOB();
+    int age = calculateAge(birthYear);
+    bool eligibility = checkEligibility(age);
+
+    printResult(eligibility, age);
+
+    return 0;
+
+}
+
+int inputDOB(){
+    int year;
+    cout << "Enter birth year(YYYY): ";
+    cin >> year;
+
+    return year;
+}
+
+int calculateAge(int birthYear){
+    int currentYear = 2025;
+    int age = currentYear - birthYear;
+
+    return age;
+}
+
+bool checkEligibility(int age){
+
+        return age>=18;
+    
+}
+
+void printResult(bool eligible, int age){
+
+    cout << "\nYour age: " << age << endl;
+
+    if(eligible){
+        cout << "Congratulations! You are eligible to vote." << endl;
+    } else {
+        cout << "Sorry! You are not eligible to vote. You must be 18 or above." << endl;
+    }
+
+}
+
+```
