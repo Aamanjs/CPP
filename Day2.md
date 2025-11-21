@@ -507,6 +507,8 @@ bool checkEligibility(int age);
 void printResult(bool eligible, int age);
 
 int main(){
+
+    cout << "\n------- Online Voting System -------\n";
     
     int birthYear = inputDOB();
     int age = calculateAge(birthYear);
