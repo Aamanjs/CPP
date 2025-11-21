@@ -11,6 +11,7 @@ using namespace std;
 #define ROW_MAX 5
 #define COL_MAX 5
 
+void transposeMatrix();
 void mulltiplyMatrix();
 void substractMatrix();
 void addMatrix();
@@ -35,7 +36,8 @@ int main(){
         cout << "1. Add Matrices\n";
         cout << "2. Subtract Matrices\n";
         cout << "3. Multiply Matrices\n";
-        cout << "4. Exit\n";
+        cout << "4. Transpose of Matrix\n";
+        cout << "5. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -51,12 +53,15 @@ int main(){
                 mulltiplyMatrix();
                 break;
             case 4:
+                transposeMatrix();
+                break;
+            case 5:
                 cout << "\nExiting program...\n";
                 break;
             default: 
                 cout << "\nInvalid choice! Please enter again.\n";
         }
-    } while(choice != 4);
+    } while(choice != 5);
 
 
     return 0;
@@ -143,6 +148,42 @@ void mulltiplyMatrix(){
         cout << "\nMatrix multiplication NOT possible!";
         cout << "\nCondition failed: col1 == row2\n";
     }
+}
+
+void transposeMatrix(){
+
+    int mChoice;
+    cout << "\nSelect Matrix to Transpose:\n";
+    cout << "1. Matrix 1\n";
+    cout << "2. Matrix 2\n";
+    cout << "Enter your choice: ";
+    cin >> mChoice;
+
+    if(mChoice == 1){
+        cout << "\nTranspose of Matrix 1:\n";
+        for(i=0; i<col1; i++){
+            for(j=0; j<row1; j++){
+                cout << Arr1[j][i] << " ";
+            }
+            cout << "\n";
+        }
+    }
+
+    else if(mChoice == 2){
+        cout << "\nTranspose of Matrix 2:\n";
+        for(i=0; i<col2; i++){
+            for(j=0; j<row2; j++){
+                cout << Arr2[j][i] << " ";
+            }
+            cout << "\n";
+        }
+    }
+
+    else {
+        cout << "\nInvalid Matrix Choice\n";
+    }
+
+
 }
 
 ```
